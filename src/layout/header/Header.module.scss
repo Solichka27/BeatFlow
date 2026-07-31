@@ -1,0 +1,17 @@
+@use './../../styles/variables' as *;
+
+.header {
+    display: flex;
+    align-items: center;
+    height: $header-height;
+    padding: 0 $spacing-lg;
+    background-color: $color-background;
+    border-bottom: 1px solid $color-border;
+}
+
+.headerTitle {
+    margin: 0;
+    color: $color-text;
+    font-size: 24px;
+    font-weight: 700;
+}

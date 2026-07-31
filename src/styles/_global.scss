@@ -1,0 +1,62 @@
+@use './colors' as *;
+@use './typography' as *;
+
+body{
+    background:$background;
+
+    color:$text;
+
+    font-family:$font-family;
+
+    overflow-x:hidden;
+
+    position:relative;
+}
+
+body::before{
+    content:"";
+
+    position:fixed;
+
+    top:-250px;
+
+    left:-150px;
+
+    width:500px;
+
+    height:500px;
+
+    border-radius:50%;
+
+    background:#7C5CFF;
+
+    filter:blur(180px);
+
+    opacity:.18;
+
+    z-index:-2;
+}
+
+body::after{
+    content:"";
+
+    position:fixed;
+
+    right:-150px;
+
+    bottom:-250px;
+
+    width:450px;
+
+    height:450px;
+
+    border-radius:50%;
+
+    background:#5DE4FF;
+
+    filter:blur(180px);
+
+    opacity:.15;
+
+    z-index:-2;
+}
