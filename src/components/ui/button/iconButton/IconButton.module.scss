@@ -1,0 +1,32 @@
+@use './../../../../styles/mixins' as *;
+@use './../../../../styles/animations' as *;
+@use './../../../../styles/shadows' as *;
+@use './../../../../styles/colors' as *;
+
+.button {
+    width: 42px;
+    height: 42px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    @include glass;
+    transition: $transition;
+    color: $text;
+
+    &:hover {
+        transform: scale(1.05);
+        box-shadow: $shadow-glow;
+    }
+
+    &:active {
+        transform: scale(.96);
+    }
+
+    &:focus-visible {
+        outline: 2px solid $primary;
+        outline-offset: 2px;
+    }
+}

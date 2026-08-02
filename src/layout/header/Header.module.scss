@@ -1,0 +1,30 @@
+@use './../../styles/variables' as *;
+@use './../../styles/colors' as *;
+
+.header {
+    display: flex;
+    align-items: center;
+    height: $header-height;
+    padding: 0 $spacing-lg;
+    background-color: $background;
+    border-bottom: 1px solid $border;
+    justify-content: space-between;
+}
+
+.headerTitle {
+    margin: 0;
+    color: $text;
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.search {
+    width: 600px;
+    flex-shrink: 0;
+
+}
+
+.actions {
+    display: flex;
+    gap: $spacing-sm;
+}

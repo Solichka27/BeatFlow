@@ -1,0 +1,51 @@
+@use '../../../styles/animations' as *;
+@use '../../../styles/mixins' as *;
+@use '../../../styles/colors' as *;
+@use '../../../styles/variables' as *;
+
+.card {
+    display: flex;
+    flex-direction: column;
+    @include glass;
+    border-radius: $radius-lg;
+    transition: $transition;
+    padding: $spacing-md;
+
+    &:hover {
+        transform: translateY(-6px);
+        box-shadow: $shadow-glow;
+    }
+}
+
+.cover {
+    width: 100%;
+    aspect-ratio: 1;
+    object-fit: cover;
+    border-radius: $radius-lg;
+    margin-bottom: $spacing-md;
+}
+
+.title {
+    font-weight: 700;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.artist {
+    color: $text-secondary;
+    font-size: 14px;
+}
+
+.actions {
+    display: flex;
+    justify-content: space-between;
+    margin-top: auto;
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    margin-bottom: $spacing-md;
+}

@@ -1,0 +1,45 @@
+@use './../../../styles/colors' as *;
+@use './../../../styles/variables' as *;
+@use './../../../styles/animations' as *;
+@use './../../../styles/shadows' as *;
+@use './../../../styles/mixins' as *;
+
+.searchContainer {
+    border-radius: $radius-md;
+    padding: $spacing-md;
+    display: flex;
+    align-items: center;
+    @include glass;
+
+    &:focus-within {
+        box-shadow: $shadow-glow;
+        transition: $transition;
+    }
+}
+
+
+
+.inputSearch {
+    flex: 1;
+    background: transparent;
+    padding: 10px;
+    color: $text;
+    border: none;
+    outline: none;
+
+    &::placeholder {
+        color: $text-secondary;
+    }
+}
+
+
+.searchIcon {
+    color: $text-secondary;
+    margin-right: 12px;
+    transition: $transition;
+}
+
+.searchContainer:focus-within .searchIcon {
+    color: $primary;
+    transform: scale(1.1);
+}
