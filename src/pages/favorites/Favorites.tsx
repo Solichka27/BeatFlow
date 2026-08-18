@@ -1,4 +1,4 @@
-import { useFavoritesStore } from '../../store/FavoritesStore';
+import { useFavoritesStore } from '../../store/favoritesStore';
 
 import MusicCard from '../../components/ui/card/MusicCard';
 import EmptyState from '../../components/ui/empty-state/EmptyState';

@@ -6,7 +6,6 @@ import { RouterProvider } from 'react-router-dom';
 import { router } from './router';
 
 import './styles/index.scss';
-import App from './App.tsx';
 
 const queryClient = new QueryClient();
 
