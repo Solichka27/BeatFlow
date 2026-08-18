@@ -1,0 +1,48 @@
+@use '../../styles/colors' as *;
+@use '../../styles/variables' as *;
+@use '../../styles/mixins' as *;
+@use '../../styles/animations' as *;
+@use '../../styles/shadows' as *;
+
+.page {
+    display: flex;
+    flex-direction: column;
+    gap: $spacing-xl;
+}
+
+.searchContainer {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: $spacing-md;
+    padding: $spacing-md $spacing-lg;
+    border-radius: $radius-lg;
+    @include glass;
+    color: $text-secondary;
+    transition: $transition;
+
+    &:focus-within {
+        color: $text;
+        box-shadow: $shadow-glow;
+    }
+
+    input {
+        flex: 1;
+        border: none;
+        outline: none;
+        background: transparent;
+        color: $text;
+        font-size: 16px;
+
+        &::placeholder {
+            color: $text-secondary;
+        }
+    }
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill,
+            minmax(180px, 1fr));
+    gap: $spacing-lg;
+}
