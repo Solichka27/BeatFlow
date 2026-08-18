@@ -37,9 +37,13 @@ export const router = createBrowserRouter([
                 element: <Artist />,
             },
             {
-                path: 's*',
+                path: 's/*',
                 element: <NotFoundPage />,
-            }
-        ]
+            },
+        ],
+    },
+],
+    {
+        basename: '/BeatFlow',
     }
-])
+);
