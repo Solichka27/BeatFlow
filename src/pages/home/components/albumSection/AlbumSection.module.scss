@@ -1,0 +1,42 @@
+@use '../../../../styles/variables' as *;
+@use '../../../../styles/colors' as *;
+@use '../../../../styles/animations' as *;
+
+.section {
+    display: flex;
+    flex-direction: column;
+    gap: $spacing-lg;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.title {
+    font-weight: 700;
+    font-size: 28px;
+    color: $text;
+    margin: 0;
+}
+
+.seeAll {
+    border: none;
+    background: transparent;
+    color: $primary;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: 600;
+    transition: $transition;
+
+    &:hover {
+        color: white;
+    }
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: $spacing-lg;
+}

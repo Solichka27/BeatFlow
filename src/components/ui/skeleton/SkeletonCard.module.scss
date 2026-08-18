@@ -1,0 +1,58 @@
+@use '../../../styles/colors' as *;
+@use '../../../styles/mixins' as *;
+@use '../../../styles/variables' as *;
+
+.card {
+    display: flex;
+    flex-direction: column;
+    gap: $spacing-md;
+    padding: $spacing-md;
+    border-radius: $radius-lg;
+    @include glass;
+}
+
+.cover {
+    width: 100%;
+    aspect-ratio: 1;
+    border-radius: $radius-md;
+    background: rgba(255, 255, 255, .08);
+    animation: skeleton 1.4s infinite ease-in-out;
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.title {
+    height: 18px;
+    width: 80%;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, .08);
+    animation: skeleton 1.4s infinite ease-in-out;
+}
+
+.artist {
+    height: 14px;
+    width: 50%;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, .08);
+    animation: skeleton 1.4s infinite ease-in-out;
+}
+
+@keyframes skeleton {
+
+    0% {
+        opacity: .45;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: .45;
+    }
+
+}

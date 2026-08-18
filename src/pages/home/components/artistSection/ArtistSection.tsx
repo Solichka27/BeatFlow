@@ -1,6 +1,7 @@
 
 
-export default function Artist() {
+
+export default function ArtistSenction() {
     return (
         <div>
             Artist

@@ -1,3 +1,8 @@
-.home{
- padding: 32px;
+@use '../../styles/variables' as *;
+
+.home {
+    display: flex;
+    flex-direction: column;
+    gap: $spacing-2xl;
+    padding: $spacing-xl;
 }

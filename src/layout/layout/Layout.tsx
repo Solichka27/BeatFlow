@@ -1,6 +1,6 @@
-import Home from "../../pages/home/Home";
 import Header from "../header/Header";
 import Sidebar from "../sidebar/Sidebar";
+import { Outlet } from 'react-router-dom';
 
 import styles from './Layout.module.scss';
 
@@ -12,7 +12,7 @@ function Layout() {
             <main className={styles.content}>
                 <Sidebar />
                 <section className={styles.page}>
-                    <Home />
+                    <Outlet />
                 </section>
 
             </main>
