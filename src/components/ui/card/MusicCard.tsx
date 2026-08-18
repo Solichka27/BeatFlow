@@ -1,6 +1,6 @@
 import styles from "./MusicCard.module.scss"
 import { Heart, Play } from 'lucide-react';
-import { useFavoritesStore } from "../../../store/FavoritesStore";
+import { useFavoritesStore } from "../../../store/favoritesStore";
 import IconButton from "../button/iconButton/IconButton";
 import type { Album } from '../../../types/album'
 interface MusicCardProps {
