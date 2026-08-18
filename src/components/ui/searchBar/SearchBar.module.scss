@@ -17,12 +17,9 @@
     }
 }
 
-
-
 .inputSearch {
     flex: 1;
     background: transparent;
-    padding: 10px;
     color: $text;
     border: none;
     outline: none;
@@ -31,7 +28,6 @@
         color: $text-secondary;
     }
 }
-
 
 .searchIcon {
     color: $text-secondary;

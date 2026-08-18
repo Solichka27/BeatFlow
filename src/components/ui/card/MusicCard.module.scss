@@ -2,6 +2,7 @@
 @use '../../../styles/mixins' as *;
 @use '../../../styles/colors' as *;
 @use '../../../styles/variables' as *;
+@use '../../../styles/shadows' as *;
 
 .card {
     display: flex;
@@ -48,4 +49,13 @@
     flex-direction: column;
     gap: 4px;
     margin-bottom: $spacing-md;
+}
+
+.favoriteButton:hover {
+    transform: scale(1.08);
+}
+
+.favoriteActive {
+    color: #ff4d7a;
+    box-shadow: $shadow-glow;
 }

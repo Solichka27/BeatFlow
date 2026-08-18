@@ -1,6 +1,6 @@
 import { House, Compass, Heart } from 'lucide-react';
 import styles from './Sidebar.module.scss';
-
+import { NavLink } from 'react-router-dom';
 function Sidebar() {
     return (
         <aside className={styles.sidebar}>
@@ -11,20 +11,22 @@ function Sidebar() {
 
             <nav className={styles.navigation}>
                 <ul className={styles.navList}>
-                    <li className={`${styles.navItem} ${styles.active}`}>
+                    <NavLink to='/' className={({ isActive }) => isActive ? styles.active : styles.link}>
                         <House size={20} />
                         <span>Home</span>
-                    </li>
+                    </NavLink>
 
-                    <li className={styles.navItem}>
+                    <NavLink to='/search' className={({ isActive }) => isActive ? styles.active : styles.link}>
                         <Compass size={20} />
-                        <span>Discover</span>
-                    </li>
+                        <span>Search</span>
+                    </NavLink>
 
-                    <li className={styles.navItem}>
+                    <NavLink to='/favorites' className={({ isActive }) => isActive ? styles.active : styles.link}>
                         <Heart size={20} />
                         <span>Favorites</span>
-                    </li>
+                    </NavLink>
+
+
                 </ul>
             </nav>
 

@@ -1,0 +1,53 @@
+@use '../../../styles/colors' as *;
+@use '../../../styles/variables' as *;
+@use '../../../styles/mixins' as *;
+@use '../../../styles/shadows' as *;
+@use '../../../styles/animations' as *;
+
+.container {
+    min-height: calc(100vh - $header-height);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: $spacing-lg;
+}
+
+.code {
+    margin: 0;
+    font-size: 120px;
+    font-weight: 800;
+    color: $primary;
+}
+
+.title {
+    margin: 0;
+    color: $text;
+    font-size: 36px;
+}
+
+.description {
+    margin: 0;
+    max-width: 420px;
+    color: $text-secondary;
+}
+
+.button {
+    padding: 14px 28px;
+    border: none;
+    border-radius: 999px;
+    cursor: pointer;
+    color: white;
+
+    background: linear-gradient(135deg,
+            $primary,
+            $secondary );
+
+    transition: $transition;
+
+    &:hover {
+        transform: translateY(-2px);
+        box-shadow: $shadow-glow;
+    }
+}
