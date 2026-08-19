@@ -1,6 +1,6 @@
 import axios from 'axios';
 
 export const api = axios.create({
-    baseURL: '/api',
+    baseURL: 'https://api.deezer.com',
     timeout: 10000,
 });
